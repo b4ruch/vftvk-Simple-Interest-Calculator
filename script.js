@@ -14,12 +14,19 @@ function compute() {
     let years = Number.parseFloat(document.getElementById("years").value);
     let interest = principal * years * rate / 100;
 
-    //Validate amount. Prevent negative values or zero
-    if (principal <= 0) {
+    //Validate amount. Prevent negative values, zero or empty
+    if (principal <= 0 || isNaN(principal)) {
         alert("Please, enter a positive number");
         document.getElementById("principal").focus();
         return;
     }
+
+    //Validate years. Prevent negative values, zero or empty
+    if (years < 1 || isNaN(years)) {
+        alert("Please, enter a valid number of years");
+        document.getElementById("years").focus();
+        return;
+    }    
 
     //Calculate the future year
     futureYear = new Date().getFullYear() + years;
