@@ -1,4 +1,72 @@
-body {background-color:tan;}
-h1{color:green;}
+/*
+#####################################################################
+#Author: Baruch                                                     #
+#IBM: Introduction to Cloud Development with HTML, CSS, JavaScript  #
+#Week 6: Final Project                                              #
+#Feb 2021                                                           #
+#####################################################################
+*/
 
+body {
+    background-color: black;
+    font-family: Arial, Helvetica;
+    color: white;
+}
 
+h1 {
+    color: grey;
+    font-family: Verdana;
+    font-size: 1.6em;
+    text-align: center;
+    margin-left: -7%;
+    margin-top: .5%;
+}
+
+.maindiv {
+    background-color: white;
+    color: black;
+    width: 400px;
+    padding: 20px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .95em;
+}
+
+.factor {
+    margin-left: 15%;
+
+}
+
+#principal {
+    margin-top: 2%;
+    margin-left: 16%;
+    width: 120px;
+}
+
+#rate {
+    margin-top: 4%;
+    margin-left: 8%;
+    width: 110px;
+}
+
+#years {
+    margin-top: 4%;
+    margin-left: 9%;
+    width: 2.5em;
+}
+.btn{
+    display: block;
+    margin-top: 4%;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+footer {
+    margin-top: 2%;
+}
+
+#copyright {
+    font-size: 1.2em;
+    font-family: Verdana;
+}

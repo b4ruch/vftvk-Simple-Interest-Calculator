@@ -1,16 +1,59 @@
+<!DOCTYPE html>
+<!-- 
+#####################################################################
+#Author: Baruch                                                     #
+#IBM: Introduction to Cloud Development with HTML, CSS, JavaScript  #
+#Week 6: Final Project                                              #
+#Feb 2021                                                           #
+#####################################################################
+  -->
 <html>
-    <head>
+
+<head>
+    <title>Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+</head>
+
+<body>
+    <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <span class="factor">Amount</span>
+        <input type="number" id="principal">
+        <br>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+        <label class="factor" for="interest">Interest Rate</label>
+        <!-- 
+            oninput-> the value is changed as the slider moves, which provides a 
+            better user experience
+         -->
+        <input type="range" id="rate" name="rate" min="1" max="20" step="0.25" value="10.25" oninput="updateInterest()">
+        <span id="val">10.25%</span>
+        <br>
+
+        <span class="factor">No. of Years</span>
+        <input type="text" id="years" list="num_years" onclick="resetYears()">
+        <datalist id="num_years">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10"></option>
+        </datalist>
+        <br>
+        <button class="factor btn" onclick="compute()">Compute Interest</button>
+        <br>
+        <div class="factor button">
+            <span id="result"></span>
+        </div>
+        <footer><span id="copyright">©</span> Everyone Can Get Rich</footer>
+    </div>
+</body>
+
 </html>
